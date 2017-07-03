@@ -30,11 +30,12 @@ export class FormsComponent implements OnInit {
 
     this.database.createPerson(lastname, firstname, Email, Comments).subscribe(
       data => {
-       this.router.navigate(['/database']);
+        this.router.navigate(['/database']);
         return true;
       },
       error => {
         console.error("Error creating item");
+  
         return Observable.throw(error);
       }
     );
