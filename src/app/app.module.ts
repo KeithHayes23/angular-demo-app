@@ -4,26 +4,28 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent} from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
-import { DatabaseComponent } from './database/database.component';
 import { FormsComponent } from './forms/forms.component';
 import { routing } from "./app.routing";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import { MaterialModule } from '@angular/material';
-import { DemoComponent } from './demo/demo.component';
+import { MaterialModule, MdIconRegistry } from '@angular/material';
 import 'hammerjs';
 import { MenuBarComponent } from './menu-bar/menu-bar.component';
+import { AwsCommonComponent } from './aws';
+import { DynamoDBComponent } from './aws/dynamodb';
+import { DynamoDBListComponent } from './aws/dynamodb';
+import { CommonListItemComponent } from './common';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
     HomeComponent,
-    DatabaseComponent,
     FormsComponent,
-    DemoComponent,
-    MenuBarComponent
+    MenuBarComponent,
+    AwsCommonComponent,
+    DynamoDBComponent,
+    DynamoDBListComponent,
+    CommonListItemComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,7 @@ import { MenuBarComponent } from './menu-bar/menu-bar.component';
     BrowserAnimationsModule,
     MaterialModule
   ],
-  providers: [],
+  providers: [MdIconRegistry],
   bootstrap: [AppComponent]
 })
 

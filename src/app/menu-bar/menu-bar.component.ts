@@ -7,6 +7,13 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class MenuBarComponent implements OnInit {
 
+ navLinks: Object[] = [
+   {label: 'HOME', link: 'home'},
+   {label: 'DynamoDB', link: 'dynamodb'},
+   {label: 'NEW', link: 'forms'}
+   ];
+
+
   constructor() { }
 
   ngOnInit() {

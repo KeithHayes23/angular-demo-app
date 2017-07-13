@@ -1,25 +1,25 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DatabaseComponent } from './database.component';
+import { AwsCommonComponent } from './aws-common.component';
 
-describe('DatabaseComponent', () => {
-  let component: DatabaseComponent;
-  let fixture: ComponentFixture<DatabaseComponent>;
+describe('AwsCommonComponent', () => {
+  let component: AwsCommonComponent;
+  let fixture: ComponentFixture<AwsCommonComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DatabaseComponent ]
+      declarations: [ AwsCommonComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DatabaseComponent);
+    fixture = TestBed.createComponent(AwsCommonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should be created', () => {
     expect(component).toBeTruthy();
   });
 });

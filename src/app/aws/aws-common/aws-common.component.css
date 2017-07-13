@@ -1,0 +1,17 @@
+.angular {
+  height: 40px;
+  margin-right: -5px;
+  margin-bottom: +5px;
+}
+.aws {
+  height: 55px;
+  margin-bottom: +5px;
+}
+.center {
+    margin: auto;
+    width: 50%;
+}
+.centerInner {
+    margin: auto;
+    width: 50%;
+}
