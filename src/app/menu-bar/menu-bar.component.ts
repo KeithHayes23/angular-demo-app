@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { AuthService } from '../services/auth/auth.service';
 
 @Component({
   selector: 'app-menu-bar',
@@ -8,13 +9,14 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class MenuBarComponent implements OnInit {
 
  navLinks: Object[] = [
-   {label: 'HOME', link: 'home'},
+   {label: 'Home', link: ''},
    {label: 'DynamoDB', link: 'dynamodb'},
-   {label: 'NEW', link: 'forms'}
    ];
 
 
-  constructor() { }
+  constructor(public auth: AuthService) {
+    auth.handleAuthentication();
+  }
 
   ngOnInit() {
   }

@@ -15,6 +15,10 @@ import { AwsCommonComponent } from './aws';
 import { DynamoDBComponent } from './aws/dynamodb';
 import { DynamoDBListComponent } from './aws/dynamodb';
 import { CommonListItemComponent } from './common';
+import { DynamodbCreateComponent } from './aws/dynamodb/dynamodb-create/dynamodb-create.component';
+
+import { AuthService } from './services/auth/auth.service';
+import { CallbackComponent } from './callback/callback.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,9 @@ import { CommonListItemComponent } from './common';
     AwsCommonComponent,
     DynamoDBComponent,
     DynamoDBListComponent,
-    CommonListItemComponent
+    CommonListItemComponent,
+    DynamodbCreateComponent,
+    CallbackComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +42,7 @@ import { CommonListItemComponent } from './common';
     BrowserAnimationsModule,
     MaterialModule
   ],
-  providers: [MdIconRegistry],
+  providers: [MdIconRegistry, AuthService],
   bootstrap: [AppComponent]
 })
 
